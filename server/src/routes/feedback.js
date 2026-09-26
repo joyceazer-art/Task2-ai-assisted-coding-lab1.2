@@ -7,7 +7,12 @@ import {
 } from '../controllers/feedbackController.js';
 
 const router = Router();
+router.post('/', createFeedback);
 
-// TODO: wire up the three routes in README.md section 2 and the summary route in section 3.
+router.get('/', getAllFeedbacks);
+
+router.get('/summary', getFeedbackSummary);
+
+router.get('/:id', getFeedback);
 
 export default router;
